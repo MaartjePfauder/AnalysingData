@@ -52,8 +52,8 @@ Assignment3/
 - **Part2_genre-classification.ipynb** → Python implementation  
 - **genreLyrics_train.csv** → Training data  
 - **genreLyrics_test.csv** → Test data  
-- **genre_predictions_sample.csv** → Sample predictions used for inspection  
-- **run_settings.txt** → Model configuration and runtime settings  
+- **genre_predictions_sample.csv** → Sample predictions 
+- **run_settings.txt** → Model configuration, prompt settings, and runtime parameters used to reproduce the experiment  
 - **confusion_matrix_zero_shot.png** → Zero-shot classification confusion matrix  
 - **confusion_matrix_few_shot.png** → Few-shot classification confusion matrix
 
