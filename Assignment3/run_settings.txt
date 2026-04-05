@@ -1,0 +1,5 @@
+MODEL_NAME=llama3.2:1b
+MAX_LYRIC_CHARS=200
+sample_fraction=0.25
+random_state=42
+few_shot_size_per_genre=2
