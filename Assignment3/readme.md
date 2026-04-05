@@ -1,4 +1,4 @@
-# Assignment 3 – Probing and Prompting Large Language Models
+# Assignment 3 – Probing and prompting large language models
 
 ## Overview
 This assignment investigates how Large Language Models (LLMs) can be analysed using probing and prompting techniques. The assignment consists of two parts. Part 1 explores whether an LLM internally represents a story closer to its book or movie version through a research proposal and a small prompt experiment. Part 2 investigates whether an LLM can classify song lyrics by genre using zero-shot and few-shot prompting strategies. The implementation for Part 2 was done in Python using Ollama, pandas, sklearn, seaborn, and matplotlib.
@@ -6,7 +6,7 @@ This assignment investigates how Large Language Models (LLMs) can be analysed us
 ## Research Questions
 
 ### Part 1
-Does a Large Language Model internally represent *Harry Potter and the Order of the Phoenix* closer to the book or the movie version, and does this differ across narrative information types such as plot, characters, and tone?
+Does a Large Language Model internally represent *Harry Potter and the Order of the Phoenix* closer to the book or the movie version, and does this differ across different information types such as plot, characters, and tone?
 
 ### Part 2
 Can a Large Language Model correctly classify song lyrics into genres using zero-shot and few-shot prompting, and how does performance vary between prompting strategies and genres?
@@ -21,7 +21,7 @@ The LLM was prompted to classify song lyrics into genres using zero-shot and few
 
 The experiment included sampling a subset of the dataset, creating prompts, inspecting raw outputs, cleaning predictions, calculating Precision/Recall/F1, and analysing confusion matrices.
 
-## Evaluation
+#### Evaluation
 Performance was evaluated using Precision, Recall and F1 score. In addition, confusion matrices were created to analyse performance differences across genres and to investigate which genres were most often confused by the model.
 
 ## Results
@@ -30,11 +30,12 @@ Performance was evaluated using Precision, Recall and F1 score. In addition, con
 Part 1 shows that the model often produces blended or incorrect narrative information. Part 2 shows that few-shot prompting slightly improves classification performance compared to zero-shot prompting, although overall performance remains limited due to model size and runtime constraints.
 
 ## Repository Structure
+```
 Assignment3/
 │
-├── Part1_report.pdf
-├── Part2_report.pdf
-├── Part2_code.ipynb
+├── Assignment3_LLM-probing_Part1.pdf.pdf
+├── Assignment3_LLM-probing_Part2.pdf
+├── Part2_genre-classification.ipynb
 ├── genreLyrics_train.csv
 ├── genreLyrics_test.csv
 ├── genre_predictions_sample.csv
@@ -42,18 +43,19 @@ Assignment3/
 ├── confusion_matrix_zero_shot.png
 ├── confusion_matrix_few_shot.png
 └── README.md
+```
 
 ## Files included
 
-- **Part1_report.pdf** → Research proposal and mini experiment  
-- **Part2_report.pdf** → Results and discussion  
-- **Part2_code.ipynb** → Python implementation  
+- **Assignment3_LLM-probing_Part1.pdf** → Research proposal and mini experiment part 1  
+- **Assignment3_LLM-probing_Part2.pdf** → Results and discussion part 2
+- **Part2_genre-classification.ipynb** → Python implementation  
 - **genreLyrics_train.csv** → Training data  
 - **genreLyrics_test.csv** → Test data  
 - **genre_predictions_sample.csv** → Sample predictions used for inspection  
 - **run_settings.txt** → Model configuration and runtime settings  
 - **confusion_matrix_zero_shot.png** → Zero-shot classification confusion matrix  
-- **confusion_matrix_few_shot.png** → Few-shot classification confusion matrix  
+- **confusion_matrix_few_shot.png** → Few-shot classification confusion matrix
 
 ## Notes
 The model used for Part 2 was **llama3.2:1b**, which was selected due to hardware limitations. Runtime optimizations such as lyric truncation and reducing the number of few-shot examples were necessary to complete the experiment. The confusion matrices and prediction samples are included to improve transparency and reproducibility of the results.
